@@ -9,7 +9,58 @@
 <body>
     <h1>Регистрация</h1>
     <form name="regForm" class="regForm">
+        <fieldset>
+            <legend>Имя</legend>
+            <input type="text" id="name" placeholder="Укажите Ваше имя" required>
+        </fieldset>
 
+        <fieldset>
+            <legend>Адрес электронной почты</legend>
+            <input type="email" id="email" placeholder="Укажите Ваш email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Возраст</legend>
+            <input type="text" id="age" placeholder="укажите Ваш возраст" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Ваш пол</legend>
+            Женищина <input type="radio" id="sex_1" name="sex" checked>
+            <br>
+            Мужчина <input type="radio" id="sex_2" name="sex">
+        </fieldset>
+
+        <fieldset>
+            <legend>Профессия</legend>
+            <select name="job" id="job" required>
+                <option value="" disabled selected hidden>Выберите Вашу профессию</option>
+                <option value="doctor">Врач</option>
+                <option value="it">Программист</option>
+                <option value="teacher">Учитель</option>
+                <option value="other">Другое</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Пароль</legend>
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Введите пароль"
+                maxlength="8"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+                required
+            />
+        </fieldset>
+
+        <input type="checkbox" name="checkbox">согласие с обработкой данных
+        
+        <div>
+            <button type="submit" name="button" class="form__submit">
+                Отправить
+            </button>
+        </div>
     </form>
 
 
