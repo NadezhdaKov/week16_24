@@ -9,15 +9,18 @@
 <body>
     <h1>Регистрация</h1>
     <form name="regForm" class="regForm">
-        <fieldset>
-            <legend>Имя</legend>
-            <input type="text" id="name" placeholder="Укажите Ваше имя" required>
-        </fieldset>
+        <div class="username">
+            <label for="username">Укажите Ваше имя </label>
+            <input type="text" name="username" id="username" placeholder="Имя пользователя">
+            <span class="error" id="usernameError"></span>
+        </div>
 
-        <fieldset>
-            <legend>Адрес электронной почты</legend>
-            <input type="email" id="email" placeholder="Укажите Ваш email" required>
-        </fieldset>
+        <div class="email">
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" id="email" name="email" placeholder="Укажите Ваш email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+       <!--
 
         <fieldset>
             <legend>Возраст</legend>
@@ -60,9 +63,11 @@
             <button type="submit" name="button" class="form__submit">
                 Отправить
             </button>
-        </div>
+        </div>-->
     </form>
 
+
+    
 
 
     <script src="./assets/index.js"></script>
